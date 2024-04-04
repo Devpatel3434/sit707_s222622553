@@ -20,7 +20,7 @@ public class Main
 		*/
     	try {
             // Choose which operation to execute
-            int choice = 1; // Change this to 1 or 2 based on your preference
+            int choice = 2; // Change this to 1 or 2 based on your preference
             
             if (choice == 1) {
                 // Execute operation for Officeworks registration page

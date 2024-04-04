@@ -48,27 +48,11 @@ public class SeleniumOperations {
 		// Load a webpage in chromium browser.
 		driver.get("https://www.officeworks.com.au/app/identity/create-account");
 		
-		/*
-		 * How to identify a HTML input field -
-		 * Step 1: Inspect the webpage, 
-		 * Step 2: locate the input field, 
-		 * Step 3: Find out how to identify it, by id/name/...
-		 */
-		
 		// Find first input field which is firstname
 		WebElement element = driver.findElement(By.id("firstname"));
 		System.out.println("Found element: " + element);
 		// Send first name
 		element.sendKeys("test1");
-		
-		/*
-		 * Find following input fields and populate with values
-		
-		WebElement element1 = driver.findElement(By.id("firstname"));
-		System.out.println("Found element: " + element1);
-		// Send first name
-		element.sendKeys("test");
-		 */
 		
 		WebElement element2 = driver.findElement(By.id("lastname"));
 		System.out.println("Found element: " + element2);
@@ -131,27 +115,12 @@ public class SeleniumOperations {
 		// Load a webpage in chromium browser.
 		driver.get("https://parabank.parasoft.com/parabank/register.htm");
 		
-		/*
-		 * How to identify a HTML input field -
-		 * Step 1: Inspect the webpage, 
-		 * Step 2: locate the input field, 
-		 * Step 3: Find out how to identify it, by id/name/...
-		 */
 		
 		// Find first input field which is firstname
 		WebElement element = driver.findElement(By.id("customer.firstName"));
 		System.out.println("Found element: " + element);
 		// Send first name
 		element.sendKeys("test1");
-		
-		/*
-		 * Find following input fields and populate with values
-		
-		WebElement element1 = driver.findElement(By.id("firstname"));
-		System.out.println("Found element: " + element1);
-		// Send first name
-		element.sendKeys("test");
-		 */
 		
 		WebElement element2 = driver.findElement(By.id("customer.lastName"));
 		System.out.println("Found element: " + element2);
@@ -201,29 +170,14 @@ public class SeleniumOperations {
 		WebElement element11 = driver.findElement(By.id("repeatedPassword"));
 		System.out.println("Found element: " + element11);
 		// Send first name
-		element11.sendKeys("Test@_51");
+		element11.sendKeys("   Test ");
 		
-		 //WebElement create = driver.findElement(By.xpath("//*[@id=\"customerForm\"]/table/tbody/tr[13]/td[2]/input"));
-	     //create.click();
-		/*
-		 * Identify button 'Create account' and click to submit using Selenium API.
-		 */
-		/* WebElement personal = driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/form/div[10]/div/button[1]/span[1]/div"));
-	     personal.click();
+		WebElement create = driver.findElement(By.xpath("//*[@id=\"customerForm\"]/table/tbody/tr[13]/td[2]/input"));
+	    create.click();
 		
-	     WebElement create = driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div/form/div[12]/button"));
-	     create.click();
-	     /*
-		/*
-		 * Take screenshot using selenium API.
-		 */
 	     File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 	        Files.copy(screenshotFile, new File("C:\\Users\\61450\\Desktop\\Deakin\\T3\\Task\\SIT707\\screenshoot\\screenshot2.png"));
 		
-		// Sleep a while
-		//sleep(2);
-		
-		// close chrome driver
 		driver.close();	
 	}
 	
